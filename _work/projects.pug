@@ -1,0 +1,36 @@
+extends templates/_layout
+include inc/_project-card
+
+block variables
+    - var bodyClass = 'projects'
+    - var n3 = 'selected'
+
+block main
+    main
+        section.section
+            .content
+                .block-2-col
+                    h1.huge Projects
+                    p.mt-1
+                        | In here, you can see some projects I've done either for school or for fun!
+                a(href="#all_projects" class="jump") see all my projects
+            .content.highlighted-project
+                h2.mb-3 Highlighted Project
+                .section.container.ps-0.pe-0.ms-0.me-0
+                    .row.g-4h
+                        .col-md-7
+                            div
+                                h3
+                                    a(href="projects/request_dashboard.html" class="highlighted-project-title goto") Request Dashboard
+                                p.subtitle.mt-1 Subtitle here
+                            p.mt-4
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        .col-md-5
+                            img(src="assets/img/projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png" alt="Mockup of Reminder Dashboard" loading="lazy")
+            div(class="content all-projects" id="all_projects")
+                h2.mb-3 All My Projects
+                .section
+                    // +project-card(href, title (3), image path (assets/img/...), alt text for image)
+                    +project-card("projects/request_dashboard.html","Request Dashboard","projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png","Mockup of Reminder Dashboard")
+                    +project-card("underconstruction.html","Uber Eats UX Project","projects/uber-eats-study/project_uber-eats-study_mock-01_thumbnail.png","Mockup of Uber Eats project")
+                    +project-card("underconstruction.html","Wordle Bot","projects/wordle-bot/project_wordle-bot_thumbnail.png","Picture of Wordle Bot with a test game displayed")

@@ -1,0 +1,6 @@
+mixin project-card(href, title, img, imgalt)
+    a.project-card(href=href)
+        .overlay
+            h3.title= title
+        .image
+            img(src="assets/img/"+img alt=imgalt loading="lazy")

@@ -1,0 +1,1 @@
+const textOptions=["Interaction Designer.","Programmer.","Developer."];var currentIndex=0;const typeSpan=document.querySelector(".typing");function typing(e,n,t=0){}

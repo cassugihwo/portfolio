@@ -1,0 +1,30 @@
+mixin carousel(c_id,labels,descs,img_srcs,img_alts)
+    // carousel([carousel id], [list(labels)], [list(descs)], [list((../assets/img/projects/)img sources)], [list(image alt texts)])
+    // Bootstrap carousel
+    div(id=`${c_id}` class="carousel slide")
+        .carousel-indicators
+            each x, index in labels
+                if index == 0
+                    button.active(type='button', data-bs-target=`#${c_id}` data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                else
+                    button(type='button' data-bs-target=`#${c_id}` data-bs-slide-to=`${index}` aria-label=`Slide ${index+1}`)
+        .carousel-inner
+            each x, index in labels
+                if index == 0
+                    .carousel-item.active
+                        img.opacity-50.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
+                        .carousel-caption.d-none.d-md-block
+                            h4= labels[index]
+                            p= descs[index]
+                else
+                    .carousel-item
+                        img.opacity-50.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
+                        .carousel-caption.d-none.d-md-block
+                            h4= labels[index]
+                            p= descs[index]
+        button.carousel-control-prev(type='button' data-bs-target=`#${c_id}` data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+        button.carousel-control-next(type='button' data-bs-target=`#${c_id}` data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next

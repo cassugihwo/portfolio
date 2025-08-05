@@ -1,0 +1,15 @@
+mixin nav(navClass, n1, n2, n3, n4, n5)
+    nav(class="nav-list "+(navClass || ''))
+        h2.nav-title Go to:
+        div
+            a(href="index.html" class=n1) hello!
+        div
+            a(href="about.html" class=n2) about me
+        div
+            a(href="projects.html" class=n3) my projects
+        div
+            a(href="contact.html" class=n4) contact me
+        div
+            a(href="attributions.html" class=n5) attributions
+        //- div
+        //-     a(href="projects/request_dashboard.html") test

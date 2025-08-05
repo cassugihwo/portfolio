@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // Bootstrap CSS CDN
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css", integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr", crossorigin="anonymous")
+        link(rel="stylesheet", href="../styles/style.css")
+        link(rel="stylesheet", href="../styles/media-queries.css")
+        block title 
+            title Cas Sugihwo
+        block variables 
+            - var bodyClass = '' 
+            - var txt = ['']
+            - var ids = ['']
+            - var bannersrc = ''
+            - var banneralt = ''
+            - var title = ''
+    body(class="project-article "+bodyClass) 
+        include ../inc/_header-projects
+        include ../inc/_nav-projects
+        block main
+            main
+                section.section
+                    block project-header
+                        .project-header
+                            div
+                                h1.huge= title
+                                p.subtitle insert subtitle here kjdhds
+                            img(src="../assets/img/projects/"+bannersrc alt=banneralt loading="lazy" class="banner")
+                    block section-content
+                        .content
+        +nav('',txt,ids)
+
+    // Bootstrap JS CDN
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js", integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q", crossorigin="anonymous")     
+    script(src="scripts/typingscript.js")

@@ -1,0 +1,53 @@
+/* Margin, padding and positioning variables */
+:root {
+  --page-margin-horizontal: 2.5rem; /* 40px */
+  --page-margin-vertical: 3.75rem; /* 60px */
+  --start-height: 6.5rem;
+  --start-height-nav: calc(var(--start-height) + var(--page-margin-vertical));
+}
+
+/* Font Variables */
+:root {
+  --font-family: "PPMori", sans-serif;
+  --font-size-largetitle: clamp(2.5rem, 5.8vw, 5.8vw);
+  --font-size-title: clamp(2rem, 5vw, 5vw);
+  --font-size-medium: 1.6rem;
+  --font-size-header: 1.25rem;
+  --font-size-regular: 1rem;
+  --font-size-small: 0.85rem;
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+}
+
+/* Color variables */
+:root {
+  --black-01: #0e0e0e;
+  --white-01: #F2F2F2;
+  --purple-01: #AF6AFD;
+  --color-background-dark: var(--black-01);
+  --color-background-01: var(--white-01);
+  --color-highlight-01: var(--purple-01);
+  --color-hyperlink-01: var(--purple-01);
+  --font-color-black: var(--black-01);
+  --font-color-white: var(--white-01);
+}
+
+/* Grid variables */
+:root {
+  /*Columns for whole page*/
+  --grid-col: var(--grid-col-12);
+  --grid-col-12: repeat(12, 1fr);
+  --grid-col-6: repeat(6, 1fr);
+  --grid-col-4: repeat(4, 1fr);
+  --grid-col-3: repeat(3, 1fr);
+  --grid-col-2: repeat(2, 1fr);
+  --grid-col-1: repeat(1, 1fr);
+  --grid-gutter: 1.25rem;
+  --section-col-start: 3;
+  --section-col-end: -2;
+  --section-col-start-mobile: 1;
+  --section-col-end-mobile: -1;
+  --nav-col-start: 1;
+  --nav-col-end: 2;
+}

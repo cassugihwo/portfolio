@@ -1,0 +1,57 @@
+@use "variables";
+
+/* Regular font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Regular font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-SemiBold.otf");
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Light font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-Extralight.otf");
+    font-style: normal;
+    font-weight: 200;
+}
+
+/* Regular Italic font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-RegularItalic.otf");
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Regular Italic font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-SemiBoldIItalic.otf");
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Light Italic font */
+@font-face {
+    font-family: "PPMori";
+    src: url("../assets/font/PPMori-ExtralightItalic.otf");
+    font-style: italic;
+    font-weight: 200;
+}
+
+* {
+    font-family: var(--font-family);
+}
+
+html {
+
+}

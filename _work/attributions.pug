@@ -1,0 +1,29 @@
+extends templates/_layout
+
+block variables
+    - var bodyClass = 'attributions'
+    - var n5 = 'selected'
+
+block main
+    main
+        section.section
+            .content
+                h1 Credits and Attributions
+                p.mb-4 Design by 
+                    a(href="about.html") Cas Sugihwo
+                    |  @ 2025
+                p This website uses  
+                    a(href="https://getbootstrap.com/" target="_blank" class="newtab") Bootstrap 5.3
+                p Icons from 
+                    a(href="https://fonts.google.com/icons" target="_blank" class="newtab") Google Fonts
+                p.mb-4 Typeset in 
+                    a(href="https://pangrampangram.com/products/mori" target="_blank" class="newtab") Mori
+                    |  by 
+                    a(href="https://pangrampangram.com/" target="_blank" class="newtab") Pangram Pangram Foundry
+                p Much help from 
+                    a(href="https://www.w3schools.com/" target="_blank" class="newtab") W3Schools
+                    |  , 
+                    a(href="https://css-tricks.com/" target="_blank" class="newtab") CSS-Tricks
+                    |  , 
+                    a(href="https://developer.mozilla.org/" target="_blank" class="newtab") MDN Web Docs
+                    |  and more.

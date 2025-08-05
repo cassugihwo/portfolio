@@ -1,0 +1,8 @@
+mixin nav(navClass, txt, ids)
+    nav(class="nav-list projects "+(navClass || ''))
+        div
+            a(href="../projects.html" class="back") Back to Projects
+        h2.nav-title.mt-3 In this project:
+        each text, index in txt
+            div
+                a(href="#"+ids[index] class="jump")= text

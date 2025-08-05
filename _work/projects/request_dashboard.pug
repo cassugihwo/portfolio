@@ -1,0 +1,81 @@
+extends ../templates/_layout-project
+
+block variables
+    - var txt = ["About", "Background", "Process", "The Result"]
+    - var ids = ["about", "background", "process", "result"]
+    - var bannersrc = 'request-dashboard/project_request-dashboard_banner.png'
+    - var banneralt = 'Banner of Request Dashboard. Mobile mockups of the request dashboard are displayed.'
+    - var title = 'Request Dashboard'
+    - var carousel_id = "processCarousel"
+    - var labels = ["Label 1", "Label 2", "Label 3"]
+    - var descs = ["Description for label 1", "Description for label 2", "aaaaaaaa"]
+    - var img_srcs = ["request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png"]
+    - var img_alts = ["...","...","..."]
+
+block section-content
+    div(class="content about" id="about")
+        .block-2-col
+            h2 About this Project
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        .container.mt-5
+            .row.g-1
+                .col-md-4
+                    img(class="square" src="../assets/img/projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png" alt="PLACEHOLDER" loading="lazy")
+                .col-md-4
+                    img(class="square" src="../assets/img/projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png" alt="PLACEHOLDER" loading="lazy")
+                .col-md-4
+                    img(class="square" src="../assets/img/projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png" alt="PLACEHOLDER" loading="lazy")
+    div(class="content background" id="background")
+        .block-2-col
+            h2 Project Background
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+    div(class="content process" id="process")
+        h2 Process
+        p.mb-5
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+        //- include ../_testing
+        .block-2-col-inv.mt-2
+            div.mt-2
+                h3.mb-3 4 Months of Work, Brainstorming and Iteration
+                p.mb-3
+                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            div
+                include ../inc/_carousel--bs
+                +carousel(carousel_id,labels,descs,img_srcs,img_alts)
+    div(class="content result" id="result")
+        h2 The Final Product
+        p.mb-5
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        .block-2-col-inv.mt-5
+            h3.mb-3 Final Mockups
+            p.mb-3
+                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
+        .vertical-scroll
+            //- add a 'scroll to the right label later'
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg1.png" alt="Page 1 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg2.png" alt="Page 2 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg3.png" alt="Page 3 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg4.png" alt="Page 4 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg5.png" alt="Page 5 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg6.png" alt="Page 6 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg7.png" alt="Page 7 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg8.png" alt="Page 8 of final project report" loading="lazy")
+        .block-2-col.mt-4.mb-5
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
+        .block-2-col-inv.mt-5
+            h3.mb-3 Report and Rationale
+            p.mb-3
+                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
+        .vertical-scroll
+            //- add a 'scroll to the right label later'
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg1.png" alt="Page 1 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg2.png" alt="Page 2 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg3.png" alt="Page 3 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg4.png" alt="Page 4 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg5.png" alt="Page 5 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg6.png" alt="Page 6 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg7.png" alt="Page 7 of final project report" loading="lazy")
+            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg8.png" alt="Page 8 of final project report" loading="lazy")

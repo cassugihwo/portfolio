@@ -1,0 +1,15 @@
+include _nav-projects
+header
+    .header
+        div 
+            a(href="../index.html" class="logo") Cas Sugihwo
+            |  · 
+            a(href="../projects.html" class="logo projects") Projects 
+        div.hamburgermenu
+            button(class="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" aria-controls="offcanvas-nav")
+            div(class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-nav" aria-labelledby="offcanvas-nav-label")
+                div(class="offcanvas-header")
+                    //- h2(class="offcanvas-title" id="offcanvas-nav-label") Go to...
+                    button(type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-theme="dark" aria-label="Close")
+                div(class="offcanvas-body")
+                    +nav('offcanvas-nav',txt,ids)
