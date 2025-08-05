@@ -112,7 +112,8 @@ a, a span {
     }
 
     /* 'jump to' link */
-    &.jump {
+    &.jump { 
+        // Add idle moving animation later?
         color: var(--font-color-white);
         opacity: 1;
         text-decoration: underline solid var(--font-color-white) 0.1em;
@@ -129,6 +130,13 @@ a, a span {
         }
         &:hover, &:focus {
             text-decoration: none;
+            color: var(--color-hyperlink-01);
+            &::after {
+                background: url("../assets/icons/icon_arrow_s_purple_crop.svg") no-repeat left center;
+                background-size: 0.8em;
+                height: 0.8em;
+                width: 0.8em;
+            }
         }
     }
 
@@ -198,13 +206,19 @@ img {
     grid-template-columns: 1fr 1fr;
 }
 
-.vertical-scroll {
+.horizontal-scroll {
     width: 100%;
     overflow-x: scroll;
     display: flex;
     flex-flow: row nowrap;
     img {
-        width: 25%;
+        &.portrait{
+            width: 25%;
+        }
+        &.landscape{
+            width: 75%;
+        }
+        
         padding: 0 0.5rem 0 0.5rem;
     }
 }
@@ -343,17 +357,29 @@ body.intro {
 
 /* about me page styling */
 body.about {
-    section.section .content {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 1rem;
-        .col1 {
-            grid-column: 1;
-        }
-        .col2 {
-            grid-column: 2;
+
+    section.section {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        .row1, .row2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
     }
+
+    // section.section .content {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, minmax(0, 1fr));
+    //     column-gap: 1rem;
+    //     .col1 {
+    //         grid-column: 1;
+    //     }
+    //     .col2 {
+    //         grid-column: 2;
+    //     }
+    // }
 }
 
 a.project-card {

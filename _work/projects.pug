@@ -1,5 +1,6 @@
 extends templates/_layout
 include inc/_project-card
+include inc/_jump-link
 
 block variables
     - var bodyClass = 'projects'
@@ -9,11 +10,10 @@ block main
     main
         section.section
             .content
-                .block-2-col
-                    h1.huge Projects
-                    p.mt-1
-                        | In here, you can see some projects I've done either for school or for fun!
-                a(href="#all_projects" class="jump") see all my projects
+                h1.huge Projects
+                p.mt-1.mb-5
+                    | In here, you can see some projects I've done either for school or for fun!
+                +jump-link("#all_projects", "see all my projects")
             .content.highlighted-project
                 h2.mb-3 Highlighted Project
                 .section.container.ps-0.pe-0.ms-0.me-0
@@ -22,9 +22,9 @@ block main
                             div
                                 h3
                                     a(href="projects/request_dashboard.html" class="highlighted-project-title goto") Request Dashboard
-                                p.subtitle.mt-1 Subtitle here
+                                p.subtitle.mt-1 An Interaction Design Project
                             p.mt-4
-                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                | The Request Dashboard is the result of 4 months of research, brainstorming and iteration. This semester-long group project was done during an interaction design course, alongside 3 other people. In collaboration with a local escape room business, my team and I used interaction design methods to come up with a solution that reduces cognitive load and improves task coordination by providing a clear, shared system for prioritizing and delegating tasks. 
                         .col-md-5
                             img(src="assets/img/projects/request-dashboard/project_request-dashboard_mock-01_thumbnail.png" alt="Mockup of Reminder Dashboard" loading="lazy")
             div(class="content all-projects" id="all_projects")

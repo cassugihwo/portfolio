@@ -1,23 +1,32 @@
 extends ../templates/_layout-project
 
+include ../inc/_carousel--bs
+include ../inc/_carousel-nocaption--bs
+
 block variables
     - var txt = ["About", "Background", "Process", "The Result"]
     - var ids = ["about", "background", "process", "result"]
     - var bannersrc = 'request-dashboard/project_request-dashboard_banner.png'
     - var banneralt = 'Banner of Request Dashboard. Mobile mockups of the request dashboard are displayed.'
     - var title = 'Request Dashboard'
-    - var carousel_id = "processCarousel"
-    - var labels = ["Label 1", "Label 2", "Label 3"]
-    - var descs = ["Description for label 1", "Description for label 2", "aaaaaaaa"]
-    - var img_srcs = ["request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png"]
-    - var img_alts = ["...","...","..."]
+    - var subtitle = 'An Interaction Design Project'
+
+    - var carousel_id_01 = "processCarousel"
+    - var labels_01 = ["Label 1", "Label 2", "Label 3"]
+    - var descs_01 = ["Description for label 1", "Description for label 2", "aaaaaaaa"]
+    - var img_srcs_01 = ["request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png"]
+    - var img_alts_01 = ["...","...", "..."]
+
+    - var carousel_id_02 = "mockupCarousel"
+    - var img_srcs_02 = ["request-dashboard/project_request-dashboard_slide_presentation-01.png","request-dashboard/project_request-dashboard_slide_presentation-02.png","request-dashboard/project_request-dashboard_slide_presentation-03.png","request-dashboard/project_request-dashboard_slide_presentation-04.png","request-dashboard/project_request-dashboard_slide_presentation-05.png","request-dashboard/project_request-dashboard_slide_presentation-06.png","request-dashboard/project_request-dashboard_slide_presentation-07.png","request-dashboard/project_request-dashboard_slide_presentation-08.png"]
+    - var img_alts_02 = ["Request Dashboard Presentation slide 1","Request Dashboard Presentation slide 2","Request Dashboard Presentation slide 3","Request Dashboard Presentation slide 4","Request Dashboard Presentation slide 5","Request Dashboard Presentation slide 6", "Request Dashboard Presentation slide 7","Request Dashboard Presentation slide 8"]
 
 block section-content
     div(class="content about" id="about")
         .block-2-col
             h2 About this Project
             p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                | The Request Dashboard is the result of 4 months of research, brainstorming and iteration. This semester-long group project was done during an interaction design course, alongside 3 other people. In collaboration with a local escape room business, my team and I used interaction design methods to come up with a solution that reduces cognitive load and improves task coordination by providing a clear, shared system for prioritizing and delegating tasks. 
         .container.mt-5
             .row.g-1
                 .col-md-4
@@ -30,52 +39,50 @@ block section-content
         .block-2-col
             h2 Project Background
             p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                | This project was done as a group project for an SFU interaction design course (IAT333) in Spring 2025. The goal of the course was to learn the entire interaction design process and its methods, then carrying out those methods with a real local business. My team and I collaborated with a local escape rooms business for 4 months, who was passionate about maximizing customer experience but had issues regarding employee task coordination.
     div(class="content process" id="process")
         h2 Process
         p.mb-5
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            | The project started with ethnographic research and ended with a solution that was iterated over several times. We employed industry standard design methodology, including Google's 
+            a(href="https://designsprintkit.withgoogle.com/methodology" target="_blank" class="newtab") Design Sprint Methodology
+            | .
         //- include ../_testing
         .block-2-col-inv.mt-2
             div.mt-2
-                h3.mb-3 4 Months of Work, Brainstorming and Iteration
+                h3.mb-3 4 Months of Research, Brainstorming and Iteration
                 p.mb-3
-                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    | Lorem ipsum dolor sit amet eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
             div
-                include ../inc/_carousel--bs
-                +carousel(carousel_id,labels,descs,img_srcs,img_alts)
+                +carousel(carousel_id_01,labels_01,descs_01,img_srcs_01,img_alts_01)
     div(class="content result" id="result")
         h2 The Final Product
         p.mb-5
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            | The final result of the project was the Request Dashboard, a lightweight mobile app that acts as a shared task request list for all staff. Our goal was to minimize uncertainty among several members regarding whether they need to perform the task. My team and I built a working web-based prototype and held an interactive demo of the application. Afterwards, a final report containing our rationale and documentation of the project was produced.
         .block-2-col-inv.mt-5
             h3.mb-3 Final Mockups
-            p.mb-3
-                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
-        .vertical-scroll
+            //- p.mb-3
+            //-         | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
+        .horizontal-scroll.mb-5
             //- add a 'scroll to the right label later'
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg1.png" alt="Page 1 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg2.png" alt="Page 2 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg3.png" alt="Page 3 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg4.png" alt="Page 4 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg5.png" alt="Page 5 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg6.png" alt="Page 6 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg7.png" alt="Page 7 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg8.png" alt="Page 8 of final project report" loading="lazy")
+            img.landscape(src="../assets/img/projects/request-dashboard/project_request-dashboard_slide_mock-01.png" alt="Page 1 of final project report" loading="lazy")
+            img.landscape(src="../assets/img/projects/request-dashboard/project_request-dashboard_slide_mock-02.png" alt="Page 2 of final project report" loading="lazy")
+            img.landscape(src="../assets/img/projects/request-dashboard/project_request-dashboard_slide_mock-03.png" alt="Page 3 of final project report" loading="lazy")
+        .mt-5.mb-5
+            +carousel-nocap(carousel_id_02,img_srcs_02,img_alts_02)
         .block-2-col.mt-4.mb-5
-            p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
+            //- p
+            //-     | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
         .block-2-col-inv.mt-5
             h3.mb-3 Report and Rationale
-            p.mb-3
-                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
-        .vertical-scroll
+            //- p.mb-3
+            //-         | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
+        .horizontal-scroll
             //- add a 'scroll to the right label later'
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg1.png" alt="Page 1 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg2.png" alt="Page 2 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg3.png" alt="Page 3 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg4.png" alt="Page 4 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg5.png" alt="Page 5 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg6.png" alt="Page 6 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg7.png" alt="Page 7 of final project report" loading="lazy")
-            img(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg8.png" alt="Page 8 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg1.png" alt="Page 1 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg2.png" alt="Page 2 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg3.png" alt="Page 3 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg4.png" alt="Page 4 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg5.png" alt="Page 5 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg6.png" alt="Page 6 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg7.png" alt="Page 7 of final project report" loading="lazy")
+            img.portrait(src="../assets/img/projects/request-dashboard/project_request-dashboard_report-pg8.png" alt="Page 8 of final project report" loading="lazy")

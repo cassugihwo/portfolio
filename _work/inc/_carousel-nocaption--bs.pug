@@ -1,5 +1,5 @@
-mixin carousel(c_id,labels,descs,img_srcs,img_alts)
-    // carousel([carousel id], [list(labels)], [list(descs)], [list((../assets/img/projects/)img sources)], [list(image alt texts)])
+mixin carousel-nocap(c_id,img_srcs,img_alts)
+    // carousel([carousel id], [list((../assets/img/projects/)img sources)], [list(image alt texts)])
     // Bootstrap carousel
     div(id=`${c_id}` class="carousel slide")
         .carousel-indicators
@@ -12,16 +12,10 @@ mixin carousel(c_id,labels,descs,img_srcs,img_alts)
             each x, index in img_srcs
                 if index == 0
                     .carousel-item.active
-                        img.opacity-50.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
-                        .carousel-caption.d-none.d-md-block
-                            h4= labels[index]
-                            p= descs[index]
+                        img.opacity-75.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
                 else
                     .carousel-item
-                        img.opacity-50.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
-                        .carousel-caption.d-none.d-md-block
-                            h4= labels[index]
-                            p= descs[index]
+                        img.opacity-75.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
         button.carousel-control-prev(type='button' data-bs-target=`#${c_id}` data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous

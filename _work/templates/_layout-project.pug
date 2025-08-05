@@ -16,6 +16,7 @@ html(lang="en")
             - var bannersrc = ''
             - var banneralt = ''
             - var title = ''
+            - var subtitle = ''
     body(class="project-article "+bodyClass) 
         include ../inc/_header-projects
         include ../inc/_nav-projects
@@ -26,7 +27,7 @@ html(lang="en")
                         .project-header
                             div
                                 h1.huge= title
-                                p.subtitle insert subtitle here kjdhds
+                                p.subtitle= subtitle
                             img(src="../assets/img/projects/"+bannersrc alt=banneralt loading="lazy" class="banner")
                     block section-content
                         .content

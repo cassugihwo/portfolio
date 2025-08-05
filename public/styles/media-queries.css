@@ -1,10 +1,7 @@
 @media (width > 80rem) {
   :root {
-    --font-size-evenhuger: clamp(2.5rem, 5.7vw, 5.7vw);
-    --font-size-huge: clamp(2.5rem, 4.2vw, 4.2vw);
-    --font-size-title: clamp(2.5rem, 4vw, 4vw);
-    --font-size-medium: clamp(2.5rem,2.5vw,2.5vw);
-    --font-size-subheading: clamp(1.75rem,2vw,2vw);
+    --font-size-evenhuger: clamp(2.5rem, 8.5vw, 8.5vw);
+    --font-size-huge: clamp(2.5rem, 5.5vw, 5.5vw);
   }
   section.section {
     grid-column: var(--section-col-start-large)/var(--section-col-end-large);
@@ -70,31 +67,16 @@
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-  body.about section.section .content {
+  body.about section.section {
+    gap: 0;
+  }
+  body.about section.section h1 {
+    margin-bottom: 10rem;
+  }
+  body.about section.section .row1, body.about section.section .row2 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-  body.about section.section .content > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  body.about section.section .content > *:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  body.about section.section .content .col1 {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    grid-row: 1;
-  }
-  body.about section.section .content .col2 {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    grid-row: 2;
+    gap: 0;
   }
   body.projects .content.all-projects .section a.project-card {
     width: 100%;
