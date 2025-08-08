@@ -17,13 +17,13 @@ html(lang="en")
             - var n4 = ''
             - var n5 = ''
     body(class=bodyClass) 
-        include ../inc/_header
         include ../inc/_nav
         block main
             main
         //- include ../inc/_footer
         +nav('',n1,n2,n3,n4,n5)
+        include ../inc/_header
 
         // Bootstrap JS CDN
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js", integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q", crossorigin="anonymous")     
-        script(src="scripts/typingscript.js")
+        //- script(src="scripts/typingscript.js")
