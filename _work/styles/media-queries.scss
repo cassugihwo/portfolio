@@ -143,11 +143,28 @@
         width: calc(100vw - 3rem);
     }
 
+    .horizontal-scroll {
+        img {
+            &.portrait{
+                width: 90%;
+            }
+            &.landscape{
+                width: 120%;
+            }
+        }
+    }
+
 }
 
 @media (scripting: none){
     header .hamburgermenu{
         display: none;
+    }
+    .carousel {
+        display: none;
+        &.nojs{
+            display: block;
+        }
     }
 }
 

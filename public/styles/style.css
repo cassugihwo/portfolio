@@ -736,42 +736,6 @@ header .header {
 header .header div {
   font-weight: var(--font-weight-bold);
 }
-header .hamburgermenu {
-  display: none;
-}
-header .hamburgermenu button.menu {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url("../assets/icons/icon_menu_white.svg");
-}
-header .hamburgermenu.nojs {
-  width: 100%;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-header .hamburgermenu.nojs nav.offcanvas-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: static;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-}
-header .hamburgermenu.nojs nav.offcanvas-nav h2, header .hamburgermenu.nojs nav.offcanvas-nav div, header .hamburgermenu.nojs nav.offcanvas-nav a {
-  -webkit-box-flex: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4;
-  white-space: nowrap;
-}
 header .offcanvas {
   background-color: var(--color-background-dark);
   border-radius: 4rem;
@@ -990,4 +954,46 @@ body.project-article .content {
 /* attributions page styling */
 body.attributions p {
   margin-bottom: 0.2rem;
+}
+
+/* Bootstrap javascript components */
+header .hamburgermenu {
+  display: none;
+}
+header .hamburgermenu button.menu {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../assets/icons/icon_menu_white.svg");
+}
+header .hamburgermenu.nojs {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+header .hamburgermenu.nojs nav.offcanvas-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+header .hamburgermenu.nojs nav.offcanvas-nav h2, header .hamburgermenu.nojs nav.offcanvas-nav div, header .hamburgermenu.nojs nav.offcanvas-nav a {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+  white-space: nowrap;
+}
+
+.carousel.nojs {
+  display: none;
 }

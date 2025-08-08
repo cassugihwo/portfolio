@@ -101,10 +101,22 @@
   .offcanvas.offcanvas-end {
     width: calc(100vw - 3rem);
   }
+  .horizontal-scroll img.portrait {
+    width: 90%;
+  }
+  .horizontal-scroll img.landscape {
+    width: 120%;
+  }
 }
 @media (scripting: none) {
   header .hamburgermenu {
     display: none;
+  }
+  .carousel {
+    display: none;
+  }
+  .carousel.nojs {
+    display: block;
   }
 }
 @media (width <= 63.75rem) and (scripting: none) {

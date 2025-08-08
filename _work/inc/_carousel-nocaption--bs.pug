@@ -22,3 +22,8 @@ mixin carousel-nocap(c_id,img_srcs,img_alts)
         button.carousel-control-next(type='button' data-bs-target=`#${c_id}` data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
+    .carousel.nojs
+        .horizontal-scroll.mb-5
+            each x, index in img_srcs
+                img.opacity-50.d-block.w-100(src=`../assets/img/projects/${img_srcs[index]}` alt=`${img_alts[index]}`)
+    
