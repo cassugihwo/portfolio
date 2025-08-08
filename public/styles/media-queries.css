@@ -35,6 +35,9 @@
   header .hamburgermenu {
     display: block;
   }
+  header .hamburgermenu.nojs {
+    display: none;
+  }
   section.section {
     grid-column: var(--section-col-start-mobile)/var(--section-col-end-mobile);
   }
@@ -97,5 +100,32 @@
   }
   .offcanvas.offcanvas-end {
     width: calc(100vw - 3rem);
+  }
+}
+@media (scripting: none) {
+  header .hamburgermenu {
+    display: none;
+  }
+}
+@media (width <= 63.75rem) and (scripting: none) {
+  header .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  header .hamburgermenu.nojs {
+    display: block;
+  }
+}
+@media (width <= 47.5rem) and (scripting: none) {
+  header .hamburgermenu.nojs nav.nav-list a, header .hamburgermenu.nojs nav.nav-list h2 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
+@media (width <= 31.25rem) and (scripting: none) {
+  header .hamburgermenu.nojs nav.nav-list a, header .hamburgermenu.nojs nav.nav-list h2 {
+    font-size: 0.5rem;
   }
 }

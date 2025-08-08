@@ -12,10 +12,10 @@ block variables
     - var subtitle = 'An Interaction Design Project'
 
     - var carousel_id_01 = "processCarousel"
-    - var labels_01 = ["Label 1", "Label 2", "Label 3"]
-    - var descs_01 = ["Description for label 1", "Description for label 2", "aaaaaaaa"]
-    - var img_srcs_01 = ["request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png","request-dashboard/project_request-dashboard_mock-01_thumbnail.png"]
-    - var img_alts_01 = ["Placeholder Image 1","Placeholder Image 2", "Placeholder Image 3"]
+    - var labels_01 = ["We began with research", "Discarded several concepts", "Faced a lot of critique", "And iterated over and over"]
+    - var descs_01 = ["Ethnography, personas, etc.", "Iteration is key after all", "From classmates and our professor", "and over and over..."]
+    - var img_srcs_01 = ["request-dashboard/project_request-dashboard_process_01.png","request-dashboard/project_request-dashboard_process_02.png","request-dashboard/project_request-dashboard_process_03.png","request-dashboard/project_request-dashboard_process_04.png"]
+    - var img_alts_01 = ["Collage of personas", "Collage of discarded concepts and storyboards", "Collage of critique written on a whiteboard", "Collage of post its, scribbles, and other artifacts of the iteration process"]
 
     - var carousel_id_02 = "mockupCarousel"
     - var img_srcs_02 = ["request-dashboard/project_request-dashboard_slide_presentation-01.png","request-dashboard/project_request-dashboard_slide_presentation-02.png","request-dashboard/project_request-dashboard_slide_presentation-03.png","request-dashboard/project_request-dashboard_slide_presentation-04.png","request-dashboard/project_request-dashboard_slide_presentation-05.png","request-dashboard/project_request-dashboard_slide_presentation-06.png","request-dashboard/project_request-dashboard_slide_presentation-07.png","request-dashboard/project_request-dashboard_slide_presentation-08.png"]
@@ -51,7 +51,11 @@ block section-content
             div.mt-2
                 h3.mb-3 4 Months of Research, Brainstorming and Iteration
                 p.mb-3
-                    | Lorem ipsum dolor sit amet eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    | During the length of the project, we worked closely with the business to provide a design solution for them. Using design methods such as those outlined in 
+                    a(href="https://designsprintkit.withgoogle.com/methodology" target="_blank" class="newtab") Google’s Design Sprint Framework
+                    | , we spent 4 months designing, brainstorming and iterating over multiple ideas, designs and solutions. In the middle of the project, we held a participatory design workshop, which I took lead in organizing, and especially referenced co design methodologies from 
+                    a(href="https://www.designkit.org/methods.html" target="_blank" class="newtab") IDEO
+                    | . 
             div
                 +carousel(carousel_id_01,labels_01,descs_01,img_srcs_01,img_alts_01)
     div(class="content result" id="result")
