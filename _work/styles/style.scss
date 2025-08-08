@@ -300,13 +300,27 @@ header {
             height: 1.5rem;
             background-image: url("../assets/icons/icon_menu_white.svg");
         }
-        &.nojs nav.offcanvas-nav{
-            display: flex;
-            position: static;
-            flex-flow: row nowrap;
-            justify-content: flex-end;
-            gap: 1rem;
+        &.nojs {
+            width: 100%;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            nav.offcanvas-nav{
+                display: flex;
+                position: static;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+                h2, div, a {
+                    flex-grow: 4;
+                    white-space: nowrap;
+                }
+                // h2 {
+                //     margin-bottom: 0;
+                // }
+            }
         }
+        
     }
 
     .offcanvas {
