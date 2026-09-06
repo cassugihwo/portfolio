@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+/* Target all selected text */
+::selection {
+  background-color: rgba(175, 133, 255, 0.8); /* Changes highlight background color */
+}
+
+/* Firefox fallback compatibility */
+::-moz-selection {
+  background-color: rgba(175, 133, 255, 0.8);
+}
