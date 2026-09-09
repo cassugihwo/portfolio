@@ -1,3 +1,4 @@
+import wipThumbnail from '../assets/wipthumbnail.png'
 import ButtonBack from '../components/ButtonBack'
 import PageLayout from '../components/PageLayout'
 import ProjectListCard from '../components/ProjectListCard'
@@ -50,7 +51,7 @@ export default function ProjectList() {
             key={project.slug}
             title={project.title}
             tags={project.tags}
-            image={project.cardInfo.cardImgSrc}
+            image={project.cardInfo.cardImgSrc ?? wipThumbnail}
             imageAlt={project.cardInfo.cardImgAlt}
             disabled
           />
