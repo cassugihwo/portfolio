@@ -44,7 +44,7 @@ export default function Landing() {
   return (
     <PageLayout>
       <header className="mt-50 lg:mt-75">
-        <h1 className="font-grotesque text-hero font-medium break-words text-white0">
+        <h1 className="font-grotesque font-medium break-words leading-none text-white0 text-herosm md:text-heromd lg:text-hero">
           Hi! I&rsquo;m{" "}
           <span className={`text-purple0 ${underline}`}>Cas Sugihwo</span>, an{" "}
           <span className={underline}>SFU</span>{" "}
@@ -60,7 +60,7 @@ export default function Landing() {
         </h1>
       </header>
 
-      <section className="mt-50 lg:mt-300">
+      <section className="mt-150 lg:mt-300">
         <h2 className="font-grotesque text-heading font-medium text-white0">
           A LITTLE <span className="block">TL;DR</span>
         </h2>
@@ -90,7 +90,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="mt-50 lg:mt-300">
+      <section className="mt-150 lg:mt-300">
         <h2 className="font-grotesque text-heading font-medium text-white0">
           PROJECT <span className="block">HIGHLIGHTS</span>
         </h2>

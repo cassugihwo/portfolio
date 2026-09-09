@@ -30,13 +30,11 @@ export default function AboutMe() {
             <p className="font-jakarta text-body text-white0/80">
               My philosophy is that designing digital products should always be
               user-centered. In a world where technology is constantly evolving,
-              user needs are transforming alongside them too. To travserse this
+              user needs are transforming alongside them too. To traverse this
               world, design and tech fluency are powerful assets.
             </p>
             <p className="font-jakarta text-body text-white0/80">
-              When I'm not knee-deep in a design project, I'm spending my time drinking coffee, reading<p className="font-jakarta text-body text-white0/80">
-              My philosophy is that designing digital products should always be user-centered. In a world where technology is constantly evolving, user needs are transforming alongside them too. To travserse this world, design and tech fluency are powerful assets.
-            </p> manga, or grinding out my current favourite games :)
+              When I'm not knee-deep in a design project, I'm spending my time drinking coffee, reading manga, or grinding out my current favourite games :)
             </p>
           </div>
         </div>
