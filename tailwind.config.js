@@ -41,9 +41,13 @@ export default {
         tag: ["1.125rem", { lineHeight: "normal", letterSpacing: "-0.9px" }],
         "display-sm": ["3rem", { lineHeight: "0.8", letterSpacing: "-1.5px" }],
         display: ["2.25rem", { lineHeight: "1.1", letterSpacing: "-1px" }],
+        // hero text for landing page ("Hi! I'm...") past lg breakpoint
         hero: ["6rem", { lineHeight: "0.882", letterSpacing: "-3px" }],
+        //  hero text past md breakpoint
         heromd: ["4rem", { lineHeight: "0.882", letterSpacing: "-3px" }],
+        //  hero text past sm breakpoint
         herosm: ["3.25rem", { lineHeight: "0.882", letterSpacing: "-3px" }],
+        // landing page h2 headers ("A LITTLE TL;DR", "PROJECT HIGHLIGHTS")
         heading: ["4.25rem", { lineHeight: "0.9", letterSpacing: "-1.2px" }],
       },
       keyframes: {

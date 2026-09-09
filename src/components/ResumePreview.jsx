@@ -25,7 +25,7 @@ function ResumePdfPage({ page }) {
   return (
     <canvas
       ref={canvasRef}
-      className="max-w-5xl rounded-sm"
+      className="w-full max-w-5xl rounded-sm"
       style={{ aspectRatio: `${x1 - x0} / ${y1 - y0}` }}
     />
   );
